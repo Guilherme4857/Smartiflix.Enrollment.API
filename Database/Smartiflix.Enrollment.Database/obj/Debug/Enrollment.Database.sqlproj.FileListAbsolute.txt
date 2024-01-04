@@ -1,6 +1,0 @@
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\bin\Debug\Enrollment.Database.dacpac
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\bin\Debug\Enrollment.Database.dll
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\bin\Debug\Enrollment.Database.pdb
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\obj\Debug\Enrollment.Database.sqlproj.AssemblyReference.cache
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\obj\Debug\Enrollment.Database.dll
-C:\workspace\Back-end-apps\Enrollment.API\Database\Enrollment.Database\obj\Debug\Enrollment.Database.pdb

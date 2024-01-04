@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Enrollment.API.props" />
-</Project>

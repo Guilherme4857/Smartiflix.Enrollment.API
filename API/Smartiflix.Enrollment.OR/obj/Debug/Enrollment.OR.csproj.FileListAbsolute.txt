@@ -1,7 +1,0 @@
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\bin\Debug\Enrollment.OR.dll
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\bin\Debug\Enrollment.OR.pdb
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\obj\Debug\Enrollment.OR.csproj.AssemblyReference.cache
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\obj\Debug\Enrollment.OR.csproj.CoreCompileInputs.cache
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\obj\Debug\Enrollment.OR.csproj.CopyComplete
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\obj\Debug\Enrollment.OR.dll
-C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.OR\obj\Debug\Enrollment.OR.pdb
