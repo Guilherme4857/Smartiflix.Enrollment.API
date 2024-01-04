@@ -1,0 +1,16 @@
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Enrollment.Database.deps.json
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Enrollment.Database.dll
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Enrollment.Database.pdb
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Enrollment.OR.dll
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\bin\Debug\net6.0\Enrollment.OR.pdb
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.csproj.AssemblyReference.cache
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.AssemblyInfoInputs.cache
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.AssemblyInfo.cs
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.csproj.CoreCompileInputs.cache
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.csproj.CopyComplete
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.dll
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\refint\Enrollment.Database.dll
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\Enrollment.Database.pdb
+C:\workspace\Back-end-apps\Enrollment.API\API\Enrollment.API.Database\obj\Debug\net6.0\ref\Enrollment.Database.dll

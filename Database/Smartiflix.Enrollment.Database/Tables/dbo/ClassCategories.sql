@@ -1,0 +1,10 @@
+﻿CREATE TABLE [dbo].[ClassCategories]
+(
+	[Id] INT NOT NULL IDENTITY,
+	[Name] NVARCHAR(100) NOT NULL,
+	[Icon] NVARCHAR(255) NOT NULL,
+	[Description] NVARCHAR(255) NOT NULL,
+	[Teacher] NVARCHAR(255) NOT NULL,
+
+	CONSTRAINT [Pk_ClassCategories] PRIMARY KEY CLUSTERED ([Id])
+)
