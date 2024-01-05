@@ -63,5 +63,6 @@
     <Build Include="Tables\dbo\ClassCategories.sql" />
     <Build Include="Tables\dbo\Plans.sql" />
     <Build Include="Tables\dbo\PlansClassCategories.sql" />
+    <Build Include="Tables\dbo\User.sql" />
   </ItemGroup>
 </Project>

@@ -2,6 +2,7 @@
 using Enrollment.Database.Repositories;
 using Enrollment.OR.EnrollClassCategory.Request;
 using Enrollment.OR.GetClassCategories.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Enrollment.API.Controllers
@@ -28,6 +29,7 @@ namespace Enrollment.API.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public IEnumerable<FoundClassCategory> GetClassCategories()
         {
             var foundClassCategories = new List<FoundClassCategory>();

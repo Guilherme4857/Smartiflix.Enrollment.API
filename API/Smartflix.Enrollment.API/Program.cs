@@ -1,7 +1,11 @@
 using Enrollment.Database.Extentions;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,15 +23,60 @@ builder.Services.AddControllers()
 
 builder.Services.AddCors();
 
+builder.Services.AddAuthentication(_ =>
+{
+    _.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    _.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(_ =>
+{
+    var key = Encoding.ASCII.GetBytes(builder.Services.BuildServiceProvider().GetService<IConfiguration>().GetValue<string>("Params:Key"));
+    _.RequireHttpsMetadata = false;
+    _.SaveToken = true;
+    _.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidateLifetime = true,
+        ValidateIssuerSigningKey = true,
+        IssuerSigningKey = new SymmetricSecurityKey(key),
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ClockSkew = TimeSpan.Zero,
+    };
+});
+
+
+
 builder.Services.DataBaseInjections();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen().AddSwaggerGenNewtonsoftSupport();
+builder.Services.AddSwaggerGen(_ =>
+{
+    _.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token",
+        Type = SecuritySchemeType.Http,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+    _.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type=ReferenceType.SecurityScheme,
+                    Id="Bearer"
+                }
+            },
+            new string[]{}
+        }
+    });
+}).AddSwaggerGenNewtonsoftSupport();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -38,7 +87,6 @@ app.UseHttpsRedirection();
 
 app.UseRouting();
 
-app.UseAuthorization();
 
 app.UseCors(
     _ => _.AllowAnyHeader()
@@ -46,11 +94,10 @@ app.UseCors(
         .AllowAnyOrigin()
 );
 
+app.UseAuthorization();
+
 app.UseEndpoints(endpoints =>
     endpoints.MapControllers()
 );
-
-
-
 
 app.Run();

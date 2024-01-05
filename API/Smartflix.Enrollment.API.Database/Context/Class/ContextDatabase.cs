@@ -1,7 +1,7 @@
-﻿using Enrollment.API.Database.Entities;
-using Enrollment.Database.Mapping;
+﻿using Enrollment.Database.Mapping;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Smartflix.Enrollment.Database.Mapping;
 
 namespace Enrollment.Database.Context.Class
 {
@@ -23,7 +23,8 @@ namespace Enrollment.Database.Context.Class
         protected sealed override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ClassCategoryMapping())
-                        .ApplyConfiguration(new PlanMapping());
+                        .ApplyConfiguration(new PlanMapping())
+                        .ApplyConfiguration(new UserMapping());
         }
     }
 }

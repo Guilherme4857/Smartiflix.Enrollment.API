@@ -1,7 +1,7 @@
 # About Smart Flix Enrollment API
 
 Smart Flix is a project planned by `Campus Code` as a final curse project and here developed by `Guilherme A.V. Marques`. Smart Flix Enrollment API 
-is the interface to deal with plans management and students enrollment
+is the interface to deal with plans management and students enrollment.
 
 ## Dependences
 
