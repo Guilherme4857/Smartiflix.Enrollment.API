@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ClassLibrary1\Smartflix.Enrollment.OR.csproj" />
+    <ProjectReference Include="..\Smartflix.Enrollment.OR\Smartflix.Enrollment.OR.csproj" />
   </ItemGroup>
 
 </Project>

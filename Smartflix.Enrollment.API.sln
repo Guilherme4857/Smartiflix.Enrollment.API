@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2 - Infra-Estrutura", "2 - 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartflix.Enrollment.Database", "API\Smartflix.Enrollment.API.Database\Smartflix.Enrollment.Database.csproj", "{4D2C4503-EF9B-4290-8FE0-3B4E7C994132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Enrollment.OR", "ClassLibrary1\Smartflix.Enrollment.OR.csproj", "{4B8F203A-A938-4788-9B9C-DBE3572E7162}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Enrollment.OR", "API\Smartflix.Enrollment.OR\Smartflix.Enrollment.OR.csproj", "{4B8F203A-A938-4788-9B9C-DBE3572E7162}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
