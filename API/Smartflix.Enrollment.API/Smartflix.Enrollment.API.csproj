@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Smartflix.Enrollment.API.Database\Smartflix.Enrollment.Database.csproj" />
+    <ProjectReference Include="..\Smartflix.Enrollment.OR\Smartflix.Enrollment.OR.csproj" />
   </ItemGroup>
 
 </Project>

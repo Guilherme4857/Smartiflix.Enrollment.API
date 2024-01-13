@@ -1,4 +1,4 @@
-﻿namespace Enrollment.OR.Base.Enums
+﻿namespace Smartflix.Enrollment.Database.Enum
 {
     public enum PaymentWay
     {

@@ -1,4 +1,4 @@
-﻿using Enrollment.OR.Base.Enums;
+﻿using Smartflix.Enrollment.Database.Enum;
 
 namespace Enrollment.API.Database.Entities
 {

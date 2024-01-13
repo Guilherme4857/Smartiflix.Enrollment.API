@@ -1,5 +1,5 @@
-﻿using Enrollment.OR.Base.Enums;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
+using Smartflix.Enrollment.Database.Enum;
 using System.ComponentModel.DataAnnotations;
 
 namespace Enrollment.OR.EnrollStudent.Request
