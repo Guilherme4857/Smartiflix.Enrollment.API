@@ -17,7 +17,7 @@ namespace Smartflix.Enrollment.API.Services
                 {
                     new Claim(ClaimTypes.Name, user.Name),
                 }),
-                Expires = DateTime.UtcNow.AddSeconds(2),
+                Expires = DateTime.UtcNow.AddHours(2),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)), SecurityAlgorithms.HmacSha256Signature)
             };
             var token = tokenHandler.CreateToken(tokenDescriptor);

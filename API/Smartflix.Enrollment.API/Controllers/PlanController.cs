@@ -1,6 +1,4 @@
 ﻿using Enrollment.API.Database.Entities;
-using Enrollment.Database.Context;
-using Enrollment.Database.Context.Class;
 using Enrollment.Database.Repositories;
 using Enrollment.OR.EnrollPlan.Request;
 using Enrollment.OR.GetClassCategories.Response;
@@ -15,44 +13,32 @@ namespace Enrollment.API.Controllers
     [ApiController]
     public class PlanController : ControllerBase
     {
-        public IPlanRepository _planRepository;
-        public IClassCategoryRepository _classCategoryRepository;
-
-        public PlanController(IPlanRepository planRepository, IClassCategoryRepository classCategoryRepository)
-        {
-            _planRepository = planRepository;
-            _classCategoryRepository = classCategoryRepository;
-        }
-
         [HttpPost]
-        public async Task<IActionResult> EnrollPlan([FromBody] RequestPlanEnroll request, CancellationToken cancellationToken)
+        public async Task<IActionResult> EnrollPlan([FromBody] RequestPlanEnroll request, IPlanRepository planRepository, IClassCategoryRepository classCategoryRepository, CancellationToken cancellationToken)
         {
             List<ClassCategory> categories = new List<ClassCategory>();
             foreach (var categoryId in request.ClassCategoriesIds)
             {
-                var classCategory = await _classCategoryRepository.GetById(categoryId, cancellationToken).ConfigureAwait(false);
+                var classCategory = await classCategoryRepository.GetById(categoryId, cancellationToken).ConfigureAwait(false);
                 categories.Add(classCategory);
             }
 
-            var plan = new Plan(request.Name, request.MonthlyValue, request.ClassTotal);
-            plan.ClassCategories = categories;
-
-            _planRepository.Add(plan);
-            await _planRepository.Push(cancellationToken).ConfigureAwait(false);
+            planRepository.Add(new Plan(request.Name, request.MonthlyValue, request.ClassTotal) { ClassCategories = categories });
+            await planRepository.Push(cancellationToken).ConfigureAwait(false);
 
             return StatusCode(StatusCodes.Status200OK);
         }
 
         [HttpGet]
-        public IEnumerable<FoundPlan> GetAllPlans()
+        public IEnumerable<FoundPlan> GetAllPlans(IPlanRepository planRepository)
         {
             var foundPlans = new List<FoundPlan>();
             var categories = new List<FoundClassCategory>();
-            var plans = _planRepository.GetAll();
- 
+            var plans = planRepository.GetAll();
+
             foreach (var plan in plans)
             {
-                foreach(var classCategory in plan.ClassCategories)
+                foreach (var classCategory in plan.ClassCategories)
                     categories.Add(new FoundClassCategory(
                         classCategory.Id,
                         classCategory.Name,

@@ -11,29 +11,22 @@ namespace Enrollment.API.Controllers
     [ApiController, Consumes("application/json"), Produces("application/json")]
     public class ClassCategoryController : ControllerBase
     {
-        private IClassCategoryRepository _classCategoryRepository;
-
-        public ClassCategoryController(IClassCategoryRepository classCategoryRepository)
-        {
-            _classCategoryRepository = classCategoryRepository;
-        }
-
         [HttpPost]
-        public async Task<IActionResult> EnrollClassCategory([FromBody] RequestClassCategoryEnroll request, CancellationToken cancellationToken)
+        public async Task<IActionResult> EnrollClassCategory([FromBody] RequestClassCategoryEnroll request, IClassCategoryRepository classCategoryRepository, CancellationToken cancellationToken)
         {
-            _classCategoryRepository.Add(new ClassCategory(request.Name, request.Icon, request.Description, request.Teacher));
+            classCategoryRepository.Add(new ClassCategory(request.Name, request.Icon, request.Description, request.Teacher));
 
-            await _classCategoryRepository.Push(cancellationToken);
+            await classCategoryRepository.Push(cancellationToken);
 
             return StatusCode(StatusCodes.Status200OK);
         }
 
         [HttpGet]
         [Authorize]
-        public IEnumerable<FoundClassCategory> GetClassCategories()
+        public IEnumerable<FoundClassCategory> GetClassCategories(IClassCategoryRepository classCategoryRepository)
         {
             var foundClassCategories = new List<FoundClassCategory>();
-            var classCategories = _classCategoryRepository.GetAll();
+            var classCategories = classCategoryRepository.GetAll();
 
             foreach (ClassCategory classCategory in classCategories)
                 foundClassCategories.Add(
