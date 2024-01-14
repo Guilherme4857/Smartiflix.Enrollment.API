@@ -16,5 +16,8 @@ namespace Smartflix.Enrollment.OR.UserEnroll.Request
 
         [JsonProperty("password")]
         public string Password { get; set; }
+
+        [JsonProperty("confirmPassword")]
+        public string ConfirmPassword { get; set; }
     }
 }
