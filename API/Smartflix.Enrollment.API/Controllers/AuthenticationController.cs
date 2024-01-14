@@ -29,6 +29,9 @@ namespace Smartflix.Enrollment.API.Controllers
         [HttpPost("sign-up")]
         public async Task<IActionResult> EnrollUser([FromBody] RequestUserEnroll request, IUserRepository userRepository, CancellationToken cancellationToken)
         {
+            if (!request.Password.Equals(request.ConfirmPassword))
+                return BadRequest(new { Message = "Confirm password is different of password." });
+
             userRepository.Add(entity: new(request.Role, request.Name, request.Email, request.Password.GetHash(SHA256.Create())));
 
             await userRepository.Push(cancellationToken);
