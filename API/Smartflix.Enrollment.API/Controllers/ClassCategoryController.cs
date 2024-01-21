@@ -1,9 +1,9 @@
 ﻿using Enrollment.API.Database.Entities;
-using Enrollment.Database.Repositories;
 using Enrollment.OR.EnrollClassCategory.Request;
 using Enrollment.OR.GetClassCategories.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Smartflix.Enrollment.Domain.Repositories;
 
 namespace Enrollment.API.Controllers
 {

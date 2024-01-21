@@ -1,9 +1,9 @@
 ﻿using Enrollment.API.Database.Entities;
-using Enrollment.Database.Repositories;
 using Enrollment.OR.EnrollPlan.Request;
 using Enrollment.OR.GetClassCategories.Response;
 using Enrollment.OR.GetPlan.Response;
 using Microsoft.AspNetCore.Mvc;
+using Smartflix.Enrollment.Domain.Repositories;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,7 +20,7 @@ namespace Enrollment.API.Controllers
             foreach (var categoryId in request.ClassCategoriesIds)
             {
                 var classCategory = await classCategoryRepository.GetById(categoryId, cancellationToken).ConfigureAwait(false);
-                categories.Add(classCategory);
+                categories.Add(classCategory as ClassCategory);
             }
 
             planRepository.Add(new Plan(request.Name, request.MonthlyValue, request.ClassTotal) { ClassCategories = categories });
