@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Smartflix.Common.Infra.Repositories;
+using Smartflix.Common.Infra.Repository;
 using Smartflix.Enrollment.Database.Entities;
 using Smartflix.Enrollment.Domain.Repositories;
 using Smartflix.Enrollment.Infra.Context;

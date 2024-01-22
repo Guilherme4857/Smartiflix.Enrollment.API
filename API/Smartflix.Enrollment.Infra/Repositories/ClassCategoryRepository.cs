@@ -1,6 +1,6 @@
 ﻿using Enrollment.API.Database.Entities;
 using Microsoft.EntityFrameworkCore;
-using Smartflix.Common.Infra.Repositories;
+using Smartflix.Common.Infra.Repository;
 using Smartflix.Enrollment.Domain.Entities;
 using Smartflix.Enrollment.Domain.Repositories;
 using Smartflix.Enrollment.Infra.Context;

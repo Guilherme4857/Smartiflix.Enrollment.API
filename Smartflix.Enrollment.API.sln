@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{56F79F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartflix.Enrollment.Domain", "Smartflix.Enrollment.Domain\Smartflix.Enrollment.Domain.csproj", "{3C2AA4D3-3A2A-4CF9-91BA-3F8E345B0579}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Enrollment.Application", "Smartflix.Enrollment.Application\Smartflix.Enrollment.Application.csproj", "{95AED293-7151-43A2-A352-0068E1BB632D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartflix.Enrollment.Application", "Smartflix.Enrollment.Application\Smartflix.Enrollment.Application.csproj", "{95AED293-7151-43A2-A352-0068E1BB632D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{17108B1A-F142-4BA8-A5DA-C90D5D67269D}"
 EndProject
@@ -37,11 +37,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{2277AF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{417B017D-E8D6-4FB3-A588-19E5002729BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Common.Domain", "Smartflix.Common.Domain\Smartflix.Common.Domain.csproj", "{58C508C1-08C9-4C57-A167-2E0D218C23D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartflix.Common.Domain", "Smartflix.Common.Domain\Smartflix.Common.Domain.csproj", "{58C508C1-08C9-4C57-A167-2E0D218C23D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartFlix.API.Configuration", "SmartFlix.API.Configuration\SmartFlix.API.Configuration.csproj", "{8906DA70-8D47-444C-A053-1F4C14446F06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartFlix.API.Configuration", "SmartFlix.API.Configuration\SmartFlix.API.Configuration.csproj", "{8906DA70-8D47-444C-A053-1F4C14446F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Common.Infra", "Smartflix.Common.Infra\Smartflix.Common.Infra.csproj", "{36311FA7-B47A-4344-B25D-C0149EBB1078}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smartflix.Common.Infra", "Smartflix.Common.Infra\Smartflix.Common.Infra.csproj", "{36311FA7-B47A-4344-B25D-C0149EBB1078}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smartflix.Common.Application", "Smartflix.Common.Application\Smartflix.Common.Application.csproj", "{28084FFB-4182-4D78-93BB-C7DA73240846}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{36311FA7-B47A-4344-B25D-C0149EBB1078}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{36311FA7-B47A-4344-B25D-C0149EBB1078}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{36311FA7-B47A-4344-B25D-C0149EBB1078}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28084FFB-4182-4D78-93BB-C7DA73240846}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28084FFB-4182-4D78-93BB-C7DA73240846}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28084FFB-4182-4D78-93BB-C7DA73240846}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28084FFB-4182-4D78-93BB-C7DA73240846}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -101,6 +107,7 @@ Global
 		{417B017D-E8D6-4FB3-A588-19E5002729BD} = {56F79F97-F4A4-4245-8D31-4395ED0B0B7F}
 		{58C508C1-08C9-4C57-A167-2E0D218C23D6} = {2277AFF3-A396-4B0A-932E-AC6E0EE04A10}
 		{36311FA7-B47A-4344-B25D-C0149EBB1078} = {417B017D-E8D6-4FB3-A588-19E5002729BD}
+		{28084FFB-4182-4D78-93BB-C7DA73240846} = {17108B1A-F142-4BA8-A5DA-C90D5D67269D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {07F89B83-9720-47D5-AC1C-69720322CF86}

@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Smartflix.Common.Domain.Entity;
-using Smartflix.Common.Domain.Repositories;
+using Smartflix.Common.Domain.Repository;
 
-namespace Smartflix.Common.Infra.Repositories
+namespace Smartflix.Common.Infra.Repository
 {
     /// <summary>
     /// Implement repository base.

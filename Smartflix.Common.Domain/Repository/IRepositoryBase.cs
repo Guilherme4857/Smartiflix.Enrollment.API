@@ -1,6 +1,6 @@
 ﻿using Smartflix.Common.Domain.Entity;
 
-namespace Smartflix.Common.Domain.Repositories
+namespace Smartflix.Common.Domain.Repository
 {
     /// <summary>
     /// Define repository base.
