@@ -6,14 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.14" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="7.0.0" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    <PackageReference Include="Swashbuckle.AspNetCore.Newtonsoft" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\SmartFlix.API.Configuration\SmartFlix.API.Configuration.csproj" />
     <ProjectReference Include="..\Smartflix.Enrollment.Client\Smartflix.Enrollment.Client.csproj" />
     <ProjectReference Include="..\Smartflix.Enrollment.Infra\Smartflix.Enrollment.Infra.csproj" />
   </ItemGroup>
