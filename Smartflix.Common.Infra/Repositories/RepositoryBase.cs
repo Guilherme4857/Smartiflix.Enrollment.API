@@ -1,23 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Smartflix.Enrollment.Domain.Context;
-using Smartflix.Enrollment.Domain.Entities;
-using Smartflix.Enrollment.Domain.Repositories;
+using Smartflix.Common.Domain.Entity;
+using Smartflix.Common.Domain.Repositories;
 
-namespace Smartflix.Enrollment.Infra.Repositories
+namespace Smartflix.Common.Infra.Repositories
 {
     /// <summary>
     /// Implement repository base.
     /// </summary>
+    /// <typeparam name="TContext">Context type.</typeparam>
     /// <typeparam name="TEntity">Entity type.</typeparam>
-    public abstract class RepositoryBase<TEntity> : IRepositoryBase<TEntity> where TEntity : class
+    public abstract class RepositoryBase<TContext, TEntity> : IRepositoryBase<TEntity> where TContext : DbContext
+                                                                                       where TEntity : class
     {
-        private IContextDatabase _context { get; }
+        private TContext _context { get; }
 
         /// <summary>
-        /// Initialize <see cref="RepositoryBase{TEntity}"/>.
+        /// Initialize <see cref="RepositoryBase{TContext, TEntity}"/>.
         /// </summary>
         /// <param name="context">Database context.</param>
-        protected RepositoryBase(IContextDatabase context)
+        protected RepositoryBase(TContext context)
         {
             _context = context;
             Entities = _context.Set<TEntity>();

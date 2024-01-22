@@ -1,4 +1,6 @@
-﻿namespace Smartflix.Enrollment.Domain.Entities
+﻿using Smartflix.Common.Domain.Entity;
+
+namespace Smartflix.Enrollment.Domain.Entities
 {
     /// <summary>
     /// Define the entity plan.

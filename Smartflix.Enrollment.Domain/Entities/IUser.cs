@@ -1,4 +1,4 @@
-﻿using Smartflix.Enrollment.Domain.Entities;
+﻿using Smartflix.Common.Domain.Entity;
 using Smartflix.Enrollment.Domain.Enum;
 
 namespace Smartflix.Enrollment.Database.Entities

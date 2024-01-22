@@ -1,6 +1,6 @@
-﻿using Smartflix.Enrollment.Domain.Entities;
+﻿using Smartflix.Common.Domain.Entity;
 
-namespace Smartflix.Enrollment.Domain.Repositories
+namespace Smartflix.Common.Domain.Repositories
 {
     /// <summary>
     /// Define repository base.

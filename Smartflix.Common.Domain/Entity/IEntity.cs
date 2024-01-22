@@ -1,4 +1,4 @@
-﻿namespace Smartflix.Enrollment.Domain.Entities
+﻿namespace Smartflix.Common.Domain.Entity
 {
     /// <summary>
     /// Define entity

@@ -1,21 +1,22 @@
 ﻿using Enrollment.API.Database.Entities;
 using Microsoft.EntityFrameworkCore;
-using Smartflix.Enrollment.Domain.Context;
+using Smartflix.Common.Infra.Repositories;
 using Smartflix.Enrollment.Domain.Entities;
 using Smartflix.Enrollment.Domain.Repositories;
+using Smartflix.Enrollment.Infra.Context;
 
 namespace Smartflix.Enrollment.Infra.Repositories
 {
     /// <summary>
     /// Implement class category repository.
     /// </summary>
-    public sealed class ClassCategoryRepository : RepositoryBase<ClassCategory>, IClassCategoryRepository
+    public sealed class ClassCategoryRepository : RepositoryBase<ContextDatabase, ClassCategory>, IClassCategoryRepository
     {
         /// <summary>
         /// Initialize <see cref="ClassCategoryRepository"/>.
         /// </summary>
         /// <param name="context">Database context.</param>
-        public ClassCategoryRepository(IContextDatabase context)
+        public ClassCategoryRepository(ContextDatabase context)
             : base(context)
         {
         }

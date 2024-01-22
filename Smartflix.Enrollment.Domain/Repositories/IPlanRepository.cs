@@ -1,4 +1,5 @@
-﻿using Smartflix.Enrollment.Domain.Entities;
+﻿using Smartflix.Common.Domain.Repositories;
+using Smartflix.Enrollment.Domain.Entities;
 
 namespace Smartflix.Enrollment.Domain.Repositories
 {
